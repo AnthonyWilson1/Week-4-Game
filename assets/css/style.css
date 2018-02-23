@@ -1,0 +1,18 @@
+body {
+    background-image: url("../images/Sullust_Imperial_Factory.jpg");
+}
+.container {
+    font-family: 'Exo', sans-serif;
+}
+.one {
+    padding-top: 1%;
+    background-color: aqua;
+    border: solid 1px black;
+}
+.two {
+    margin-top: 15%;
+    color: aqua;
+}
+.three {
+    color: aqua;
+}
