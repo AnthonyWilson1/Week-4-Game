@@ -8,90 +8,72 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-    <title>Star Wars</title>
+    <title>Crystal Collector</title>
 </head>
 <body>
  
     <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Crystal Collector !!!</h1>
+            </div>
+            <div class="col-6"></div>
+        </div>
 
-            <div class="row">
-                <div class="col">
+        <div class="row">
+            <div class="col-6 one">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crytals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+            </div>
+            <div class="col-6"></div>
+        </div>
 
-                </div>
-                <div class="col">
+        <div class="row">
+            <div class="col-3 three">
+                <p id="Random-Number"></p>
+            </div>
+            <div class="col-3 two">
+                <p>Wins:</p> <p id="Win-Counter">0</p>
+                <p>Losses:</p> <p id="Loss-Counter">0</p>
+            </div>
+            <div class="col-6"></div>
+        </div>
 
+        <div class="row">
+                <div id="gem1" class="col">
+                    <img src="assets/images/gem1.png" class="img-fluid">
                 </div>
-                <div class="col">
-                    <h1 class="p1">Star Wars RPG!</h1>
+                <div id="gem2" class="col">
+                    <img src="assets/images/gem2.png" class="img-fluid">
                 </div>
-            </div>
+                <div id="gem3" class="col">
+                    <img src="assets/images/gem3.png" class="img-fluid">
+                </div>
+                <div id="gem4" class="col">
+                    <img src="assets/images/gem4.png" class="img-fluid">
+                </div>
+                <div class="col-6"></div>
+        </div>
 
-            <div class="row">
-                <div id="luke" class="col one">
-                    <p id="luke1" class="text-center">Luke-Skywalker</p>
-                    <img id="luke2" class="img-fluid" src="assets/images/luke-skywalker.jpeg">
-                    <p class="text-center">120</p>
-                </div>
-                <div id="palp" class="col one">
-                    <p>Emperor-Palpatine</p>
-                    <img class="img-fluid" src="assets/images/Emperor-Palpatine.jpeg">
-                    <p class="text-center">100</p>
-                </div>
-                <div id="maul" class="col one">
-                    <p class="text-center">Darth-Maul</p>
-                    <img class="img-fluid" src="assets/images/Darth-Maul.jpeg">
-                    <p class="text-center">150</p>
-                </div>
-                <div id="sully" class="col one">
-                    <p class="text-center">Imperial-Sullist</p>
-                    <img class="img-fluid" src="assets/images/Sullust_Imperial_Factory.jpg">
-                    <p class="text-center">180</p>
-                </div>
-                <div class="col-4"></div>
+        <div class="row">
+            <div class="col-6 three">
+                <p>Your total score is:</p> 
             </div>
+            <div class="col-6"></div>
+        </div>
 
-            <div class="row three">
-                <h2>Your Character</h2>
-            </div>
-            <div class="row">
-                  <div id="chosenCharr" class="col chosenChar"></div>
-                  <div class="col"></div>
-                  <div class="col"></div>
-                  <div class="col"></div>
-                  <div class="col-4"></div>
-            </div>
-            <div class="row">
-               <h2 class="two">Enemies Available To Attack </h2>
-            </div>
-            <div id="enemiesAvail" class="row">
-                <div id="availOne" class="col enemiesAvailOne"></div>
-                <div id="availTwo" class="col enemiesAvailTwo"></div>
-                <div id="availThree" class="col enemiesAvailThree"></div>
-                <div class="col"></div>
-                <div class="col-4"></div>
-                <div id="filler"></div>
-            </div>
-            <div class="row">
-                <h2 class="three">Fight Section</h2>
-            </div>
-            <div class="row">
-                <button type="button" class="btn btn-primary">Attack</button>
-            </div>
-            <div class="row">
-                <h2 class="three">Defender</h2>
-            </div>
-            <div class="row">
-                <div id="chosenDef" class="col chosenDeff"></div>
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col-4"></div>
-    </div>    
+        <div class="row">
+            <div class="col-6 two">
+                    <p id="Your-Score">0</p>
+                </div>
+                <div class="col-6"></div>
+        </div>
+
+              
        
-
-
-
-
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

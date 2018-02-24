@@ -1,165 +1,146 @@
 $(document).ready(function(){
 
-    function luke() {
-        var heading = $("<p></p>").text("Luke-Skywalker");
-        var img = ('<img src="assets/images/luke-skywalker.jpeg">');
-        var paragraph = $("<p></p>").text(120);
-        $(".chosenChar").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function lukeE1() {
-        var heading = $("<p></p>").text("Luke-Skywalker");
-        var img = ('<img src="assets/images/luke-skywalker.jpeg">');
-        var paragraph = $("<p></p>").text(120);
-        $(".enemiesAvailOne").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
+    var win = 0
+    var loss = 0
+    var yourScore = 0
+
+
+    function randomNumber (min,max) {
+        var number = Math.floor(Math.random() * (max - min) ) + min;    
+        return randomNumber = number
     }
-    function palp() {
-        var heading = $("<p></p>").text("Emperor-Palpatine");
-        var img = ('<img src="assets/images/Emperor-Palpatine.jpeg">');
-        var paragraph = $("<p></p>").text(100);
-        $(".chosenChar").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function palpE1() {
-        var heading = $("<p></p>").text("Emperor-Palpatine");
-        var img = ('<img src="assets/images/Emperor-Palpatine.jpeg">');
-        var paragraph = $("<p></p>").text(100);
-        $(".enemiesAvailOne").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function palpE2() {
-        var heading = $("<p></p>").text("Emperor-Palpatine");
-        var img = ('<img src="assets/images/Emperor-Palpatine.jpeg">');
-        var paragraph = $("<p></p>").text(100);
-        $(".enemiesAvailTwo").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function maul() {
-        var heading = $("<p></p>").text("Darth-Maul");
-        var img = ('<img src="assets/images/Darth-Maul.jpeg">');
-        var paragraph = $("<p></p>").text(150);
-        $(".chosenChar").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function maulE2() {
-        var heading = $("<p></p>").text("Darth-Maul");
-        var img = ('<img src="assets/images/Darth-Maul.jpeg">');
-        var paragraph = $("<p></p>").text(150);
-        $(".enemiesAvailTwo").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function maulE3() {
-        var heading = $("<p></p>").text("Darth-Maul");
-        var img = ('<img src="assets/images/Darth-Maul.jpeg">');
-        var paragraph = $("<p></p>").text(150);
-        $(".enemiesAvailThree").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function sully() {
-        var heading = $("<p></p>").text("Imperial-Sullist");
-        var img = ('<img src="assets/images/Sullust_Imperial_Factory.jpg">');
-        var paragraph = $("<p></p>").text(180);
-        $(".chosenChar").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function sullyE3() {
-        var heading = $("<p></p>").text("Imperial-Sullist");
-        var img = ('<img src="assets/images/Sullust_Imperial_Factory.jpg">');
-        var paragraph = $("<p></p>").text(180);
-        $(".enemiesAvailThree").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
-    function palpDef() {
-        var heading = $("<p></p>").text("Emperor-Palpatine");
-        var img = ('<img src="assets/images/Emperor-Palpatine.jpeg">');
-        var paragraph = $("<p></p>").text(100);
-        $("#chosenDef").prepend(heading,img,paragraph);
-        $("img").addClass("img-fluid");
-    };
+
+    function randomNumberG1 (min,max) {
+        var number = Math.floor(Math.random() * (max - min) ) + min;    
+        return gem1 = number
+    }
+
+    function randomNumberG2 (min,max) {
+        var number = Math.floor(Math.random() * (max - min) ) + min;    
+        return gem2 = number
+    }
+
+    function randomNumberG3 (min,max) {
+        var number = Math.floor(Math.random() * (max - min) ) + min;    
+        return gem3 = number
+    }
+
+    function randomNumberG4 (min,max) {
+        var number = Math.floor(Math.random() * (max - min) ) + min;    
+        return gem4 = number
+    }
 
 
-    $("#luke").click(function(){
-        $("#luke").remove();
-        $("#palp").remove();
-        $("#maul").remove();
-        $("#sully").remove();
-        luke();
-        palpE1();
-        maulE2();
-        sullyE3();
-        $("p").addClass("text-center")
-        $("#chosenCharr").addClass("one");
-        $(".enemiesAvailOne").addClass("four");
-        $(".enemiesAvailTwo").addClass("four");
-        $(".enemiesAvailThree").addClass("four");
-        $(".two").css({'margin-top' : '0%'});
+    $("#gem1").click(function() {
+        //$("#gem1").attr("value",gem1);
+        //console.log($("#gem1").attr("value"));
+        yourScore += gem1;
+        $("#Your-Score").empty();
+        $("#Your-Score").append(yourScore);
+        console.log(yourScore);
+        console.log(gem1);
     });
 
-    $("#palp").click(function(){
-        $("#palp").remove();
-        $("#luke").remove();
-        $("#maul").remove();
-        $("#sully").remove();
-        palp();
-        lukeE1();
-        maulE2();
-        sullyE3();
-        $("p").addClass("text-center")
-        $("#chosenCharr").addClass("one");
-        $(".enemiesAvailOne").addClass("four");
-        $(".enemiesAvailTwo").addClass("four");
-        $(".enemiesAvailThree").addClass("four");
-        $(".two").css({'margin-top' : '0%'});
+    $("#gem2").click(function() {
+        //$("#gem2").attr("value",gem2);
+        //console.log($("#gem2").attr("value"));
+        yourScore += gem2;
+        $("#Your-Score").empty();
+        $("#Your-Score").append(yourScore);
+        console.log(yourScore);
+        console.log(gem2);
     });
 
-    $("#maul").click(function(){
-        $("#maul").remove();
-        $("#palp").remove();
-        $("#luke").remove();
-        $("#sully").remove();
-        maul();
-        lukeE1();
-        palpE2();
-        sullyE3();
-        $("p").addClass("text-center")
-        $("#chosenCharr").addClass("one");
-        $(".enemiesAvailOne").addClass("four");
-        $(".enemiesAvailTwo").addClass("four");
-        $(".enemiesAvailThree").addClass("four");
-        $(".two").css({'margin-top' : '0%'});
+    $("#gem3").click(function() {
+        //$("#gem3").attr("value",gem3);
+        //console.log($("#gem3").attr("value"));
+        yourScore += gem3;
+        $("#Your-Score").empty();
+        $("#Your-Score").append(yourScore);
+        console.log(yourScore);
+        console.log(gem3);
     });
 
-
-    $("#sully").click(function(){
-        $("#sully").remove();
-        $("#maul").remove();
-        $("#palp").remove();
-        $("#luke").remove();
-        sully();
-        lukeE1();
-        palpE2();
-        maulE3();
-        $("p").addClass("text-center")
-        $("#chosenCharr").addClass("one");
-        $(".enemiesAvailOne").addClass("four");
-        $(".enemiesAvailTwo").addClass("four");
-        $(".enemiesAvailThree").addClass("four");
-        $(".two").css({'margin-top' : '0%'});
+    $("#gem4").click(function() {
+        //$("#gem4").attr("value",gem4);
+        //console.log($("#gem4").attr("value"));
+        yourScore += gem4;
+        $("#Your-Score").empty();
+        $("#Your-Score").append(yourScore);
+        console.log(yourScore);
+        console.log(gem4);
     });
+    
 
 
-    $("#availOne").click(function(){
-        $("#availOne").remove();
-        $("#filler").addClass("col")
-        palpDef();
-        $("#chosenDef").addClass("five")
-        $("#chosenDef").addClass("text-center")
-    });
+    function reset() {
+        randomNumber(19,120);
+        randomNumberG1(1,12);
+        randomNumberG2(1,12);
+        randomNumberG3(1,12);
+        randomNumberG4(1,12);
+        var yourScore = 0
+        $("#Your-Score").empty();
+        $("#Your-Score").append(yourScore);
+        addRandom();
+
+    };
+
+    function addWin() {
+        win ++;
+        $("#Win-Counter").empty();
+        $("#Win-Counter").append(win);
+    };
+
+    function addLoss() {
+        loss ++;
+        $("#Loss-Counter").empty();
+        $("#Loss-Counter").append(loss);
+    };
+
+    function startGame () {
+        randomNumber(19,120);
+        randomNumberG1(1,12);
+        randomNumberG2(1,12);
+        randomNumberG3(1,12);
+        randomNumberG4(1,12);
+        addScore();
+        addRandom();
+    }
+
+    function addScore () {
+       $("#Your-Score").empty();
+       $("#Your-Score").append(yourScore);
+    };
+
+    function addRandom () {
+        $("#Random-Number").append(randomNumber);
+    };
+
+    startGame();
+
+    console.log(randomNumber);
+    console.log(yourScore);
+
+    if (yourScore === randomNumber) {
+        addWin();
+        reset();
+    } else if (yourScore > randomNumber) {
+        addLoss();
+        reset();
+        }
+    
+
+    
 
 
 
 
 
+
+
+
+
+   
 
 });
