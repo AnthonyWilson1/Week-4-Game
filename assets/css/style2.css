@@ -29,9 +29,9 @@ body {
 }
 
 }
-[class*="col-"], .col {
+/* [class*="col-"], .col {
     border: 1px dashed black;
 }
 .row {
     border: 1px dashed black;
-}
+} */
